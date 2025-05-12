@@ -44,28 +44,28 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
       active: pathname === "/dashboard",
     },
     {
-      href: "/dashboard/appointments",
+      href: "/appointments",
       label: t("appointments"),
       icon: Calendar,
-      active: pathname.includes("/dashboard/appointments"),
+      active: pathname.includes("/appointments"),
     },
     {
-      href: "/dashboard/services",
+      href: "/services",
       label: t("services"),
       icon: Scissors,
-      active: pathname.includes("/dashboard/services"),
+      active: pathname.includes("/services"),
     },
     {
-      href: "/dashboard/finances",
+      href: "/finances",
       label: t("finances"),
       icon: DollarSign,
-      active: pathname.includes("/dashboard/finances"),
+      active: pathname.includes("/finances"),
     },
     {
-      href: "/dashboard/settings",
+      href: "/settings",
       label: t("settings"),
       icon: Settings,
-      active: pathname.includes("/dashboard/settings"),
+      active: pathname.includes("/settings"),
     },
   ]
 
@@ -76,17 +76,6 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
         <header className="flex h-16 shrink-0 items-center gap-2 border-b px-4">
           <SidebarTrigger className="-ml-1" />
           <Separator orientation="vertical" className="mr-2 h-4" />
-          <Breadcrumb>
-            <BreadcrumbList>
-              <BreadcrumbItem>
-                <BreadcrumbLink href="#">Beauty Paradise</BreadcrumbLink>
-              </BreadcrumbItem>
-              <BreadcrumbSeparator />
-              <BreadcrumbItem>
-                <BreadcrumbPage>Dashboard</BreadcrumbPage>
-              </BreadcrumbItem>
-            </BreadcrumbList>
-          </Breadcrumb>
         </header>
         <div className="flex flex-1 flex-col gap-4 p-4">
           <main className="flex-1 overflow-y-auto">{children}</main>
